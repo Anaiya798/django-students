@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>sillystudents</title>
+</head>
+<body>
+    <div>
+        <h1>Статистические данные о студентах</h1>
+    </div>
+        <div>
+            <h3>Сколько лекций посетят студенты</h3>
+            {% for k, v in ans1.items %}
+                <p>
+                    {{ k }} <text>:</text> {{ v }}
+                </p>
+            {% endfor %}
+        </div>
+        <div>
+            <h3>Самые популярные лекции</h3>
+            {% for item in ans2 %}
+                <p>
+                    {{ item }}
+                </p>
+            {% endfor %}
+        </div>
+        <div>
+            <h3>Самые непопулярные лекции</h3>
+            {% for item in ans3 %}
+                <p>
+                    {{ item }}
+                </p>
+            {% endfor %}
+        </div>
+        <div>
+            <h3>Лекции с популярностью выше среднего</h3>
+            {% for item in ans4 %}
+                <p>
+                    {{ item }}
+                </p>
+            {% endfor %}
+        </div>
+        <div>
+            <h3>Лекции курсов, стартовавших в 2021</h3>
+            {% for item in ans5 %}
+                <p>
+                    {{ item }}
+                </p>
+            {% endfor %}
+        </div>
+        <div>
+            <h3>Средний год рождения студентов по курсам</h3>
+            {% for k, v in ans6.items %}
+                <p>
+                    {{ k }} <text>:</text> {{ v }}
+                </p>
+            {% endfor %}
+        </div>
+        <div>
+            <h3>Почты студентов, не посещающих самые непопулярные лекции</h3>
+            {% for item in ans7 %}
+                <p>
+                    {{ item }}
+                </p>
+            {% endfor %}
+        </div>
+        <div>
+            <h3>Лекции, где ожидается больше 2 студентов</h3>
+                <p>
+                    {{ ans8 }}
+                </p>
+        </div>
+        <div>
+            <h3>Среднее расстояние между лекциями курсов (в днях)</h3>
+            {% for k, v in ans9.items %}
+                <p>
+                    {{ k }} <text>:</text> {{ v }}
+                </p>
+            {% endfor %}
+        </div>
+
+</body>
+</html>
